@@ -1,6 +1,7 @@
 package com.superw.tngou.activity;
 
 import android.os.Bundle;
+import android.support.v7.widget.RecyclerView;
 
 import com.superw.tngou.BaseActivity;
 import com.superw.tngou.R;
@@ -23,16 +24,24 @@ public class DisplayImagesActivity extends SwipeBackActivity {
     private int row = 20;
     private String id;
 
+    private RecyclerView mRecyclerView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_images);
-        int position = getIntent().getIntExtra(EXTRA_POSITION, 0);
 
+        int position = getIntent().getIntExtra(EXTRA_POSITION, 0);
         if (position != -1) {
             id = Classify.ID[position];
         }
 
+        initViews();
+
+        request();
+    }
+
+    private void request() {
         Map<String, String> params = new HashMap<>();
         params.put("page", String.valueOf(page));
         params.put("row", String.valueOf(row));
@@ -46,6 +55,9 @@ public class DisplayImagesActivity extends SwipeBackActivity {
         });
     }
 
+    private void initViews() {
+        mRecyclerView = getViewById(R.id.rv_actvitiy_display_image);
+    }
 
 
 }

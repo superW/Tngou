@@ -6,6 +6,7 @@
     tools:context="com.superw.tngou.activity.DisplayImagesActivity">
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_actvitiy_display_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
