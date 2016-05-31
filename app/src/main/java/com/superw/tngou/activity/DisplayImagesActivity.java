@@ -7,6 +7,7 @@ import com.superw.tngou.R;
 import com.superw.tngou.bean.ImageListBean;
 import com.superw.tngou.constant.Classify;
 import com.superw.tngou.constant.Constants;
+import com.superw.tngou.helper.swipeback.SwipeBackActivity;
 import com.superw.tngou.http.AccessNetWork;
 import com.superw.tngou.http.CustomResponseCallBack;
 import com.superw.tngou.utils.L;
@@ -14,7 +15,7 @@ import com.superw.tngou.utils.L;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DisplayImagesActivity extends BaseActivity {
+public class DisplayImagesActivity extends SwipeBackActivity {
 
     public static final String EXTRA_POSITION = "position";
 
