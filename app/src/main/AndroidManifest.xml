@@ -11,7 +11,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,11 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".activity.DisplayImagesActivity"
+        <activity
+            android:name=".activity.DisplayImagesActivity"
+            android:theme="@style/Theme.Swipe.Back" />
+        <activity android:name=".activity.DisplayImageActivity"
             android:theme="@style/Theme.Swipe.Back"
             />
-
     </application>
 
 </manifest>

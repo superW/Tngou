@@ -1,6 +1,7 @@
 package com.superw.tngou.http;
 
 import com.google.gson.Gson;
+import com.superw.tngou.utils.L;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.builder.GetBuilder;
 import com.zhy.http.okhttp.builder.PostFormBuilder;
@@ -72,7 +73,7 @@ public class AccessNetWork {
 
             @Override
             public void onError(Call call, Exception e) {
-
+                L.e("exception message is " + e.getMessage());
             }
 
             @Override

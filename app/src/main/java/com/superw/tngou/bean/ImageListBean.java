@@ -1,5 +1,6 @@
 package com.superw.tngou.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -36,7 +37,7 @@ public class ImageListBean {
         return tngou;
     }
 
-    public static class TngouEntity {
+    public static class TngouEntity implements Serializable{
         private int count;
         private int fcount;
         private int galleryclass;
