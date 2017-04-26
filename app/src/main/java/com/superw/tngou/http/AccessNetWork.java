@@ -65,6 +65,7 @@ public class AccessNetWork {
             @Override
             public T parseNetworkResponse(Response response) throws Exception {
                 String json = response.body().string();
+//                L.d(json);
                 Gson gson = new Gson();
                 T t = gson.fromJson(json, tClass);
                 return t;
